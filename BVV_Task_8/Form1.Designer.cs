@@ -1,6 +1,6 @@
 ﻿namespace BVV_Task_8;
 
-partial class Form1
+sealed partial class Form1
 {
     /// <summary>
     ///  Required designer variable.
@@ -17,22 +17,38 @@ partial class Form1
         {
             components.Dispose();
         }
+
         base.Dispose(disposing);
     }
 
     #region Windows Form Designer generated code
 
     /// <summary>
-    ///  Required method for Designer support - do not modify
-    ///  the contents of this method with the code editor.
+    /// Required method for Designer support - do not modify
+    /// the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent()
     {
-        this.components = new System.ComponentModel.Container();
-        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(800, 450);
-        this.Text = "Form1";
+        components = new System.ComponentModel.Container();
+        timer = new System.Windows.Forms.Timer(components);
+        SuspendLayout();
+        // 
+        // timer
+        // 
+        timer.Enabled = true;
+        timer.Tick += timer_Tick;
+        // 
+        // Form1
+        // 
+        AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+        AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        ClientSize = new System.Drawing.Size(800, 450);
+        StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+        Text = "Form1";
+        ResumeLayout(false);
     }
+
+    private System.Windows.Forms.Timer timer;
 
     #endregion
 }
